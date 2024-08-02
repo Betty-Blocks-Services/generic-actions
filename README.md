@@ -2,7 +2,7 @@
 This repository is used by the Services department of Betty Blocks to host generic (custom) actions.
 
 ## Contents
-This component set contains:
+This action set contains:
 1. someActionName: short description of special/custom features
 `insert screenshot`
 
