@@ -28,9 +28,10 @@ lint:
     - trivy@0.54.1
     - yamllint@1.35.1
 actions:
+  disabled:
+    - commitlint
   enabled:
     - commitizen
-    - commitlint
     - trunk-announce
     - trunk-check-pre-push
     - trunk-fmt-pre-commit
