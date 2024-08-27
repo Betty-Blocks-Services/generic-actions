@@ -7,7 +7,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.1
+      ref: v1.6.2
       uri: https://github.com/trunk-io/plugins
 # Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)
 runtimes:
@@ -17,15 +17,20 @@ runtimes:
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
   enabled:
-    - checkov@3.2.228
+    - pre-commit-hooks@4.6.0
+    - checkov@3.2.236
     - git-diff-check
     - markdownlint@0.41.0
+    - osv-scanner@1.8.4
+    - trufflehog@3.81.9
+    - eslint@9.9.1
     - prettier@3.3.3
     - trivy@0.54.1
-    - trufflehog@3.81.9
     - yamllint@1.35.1
 actions:
   enabled:
+    - commitizen
+    - commitlint
     - trunk-announce
     - trunk-check-pre-push
     - trunk-fmt-pre-commit
@@ -33,3 +38,6 @@ actions:
 merge:
   required_statuses:
     - Trunk Check
+tools:
+  enabled:
+    - commitizen@4.3.0

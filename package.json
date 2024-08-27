@@ -1,20 +1,14 @@
 {
   "devDependencies": {
-    "commitizen": "^4.3.0",
+    "@eslint/js": "^9.9.1",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
     "husky": "^9.1.4"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    },
-    "husky": {
-      "hooks": {
-        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-      }
     }
-  },
-  "scripts": {
-    "commit": "cz"
   }
 }
